@@ -1,0 +1,37 @@
+
+{% load static %}
+
+</html>
+<title> Website Layout | CodingLab</title>
+    <link rel="stylesheet" href="{% static 'todoapp/css/landing.css' %}">
+	<link href="{% static 'todoapp/img/img3.jpg' %}">
+    <script src="https://kit.fontawesome.com/a076d05399.js"></script>
+   </head>
+<body>
+  <nav>
+    <div class="menu">
+      <div class="logo">
+        <a href="{% url 'index' %}">WeeNotes</a>
+      </div>
+<link rel="stylesheet" href="{% static 'todoapp/css/style.css' %}">
+
+<div class="wrapper">
+    
+    <div class="logo">
+        <img src="https://www.freepnglogos.com/uploads/w-letter-logo-png/w-letter-images-about-inspirations-pinterest-1.png"  alt="" /></a> 
+    </div>
+    <div class="text-center mt-8 loggedout">
+        Logged Out Successfully
+    </div>
+    {% comment %} <div class="text-center mt-4 name">
+        WeeToDo
+    </div> {% endcomment %}
+    <div class="text-center fs-6">
+        <p></p> <a href="{% url 'login' %}">Login</a>
+    </div>
+    <hr>
+    <div class="text-center fs-6">
+        <p></p> <a href="{% url 'index' %}">Back</a>
+    </div>
+</div> 
+

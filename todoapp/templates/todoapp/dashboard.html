@@ -1,0 +1,41 @@
+{% load static %}
+
+</html>
+<title> WeeNotes</title>
+    <link rel="stylesheet" href="{% static 'todoapp/css/landing.css' %}">
+	<link href="{% static 'todoapp/img/img3.jpg' %}">
+    <script src="https://kit.fontawesome.com/a076d05399.js"></script>
+   </head>
+<body>
+   
+  <nav>
+    <div class="menu">
+      <div class="logo">
+        <a href="{% url 'dashboard' %}">WeeNotes</a>
+      </div>
+
+      <ul>
+        <li><a href="{% url 'about' %}">About</a></li>
+        <li><a href="#">Contact</a></li>
+        <li><a href="{% url 'logout' %}">Logout</a></li>
+      </ul>
+      
+    </div>
+  </nav>
+  <div class="img"></div>
+  <div class="center">
+    <div class="title">Create Amazing Notes on WeeNotes</div>
+    <div class="sub_title">Sign in to create notes</div>
+    <div class="btns">
+      <form action="{% url 'home' %}" method="post">
+        {% csrf_token %}
+      <button type="submit">Create Notes</button>
+    </form>
+    </div>
+  </div>
+      
+      </nav>
+ 
+</body>
+</html>
+

@@ -1,0 +1,43 @@
+
+{% extends 'todoapp/base.html' %}
+{% load static %}
+{% block content %}
+   
+
+<link rel="stylesheet" href="{% static 'todoapp/css/style.css' %}">
+<div class="wrapper">
+    <div class="logo">
+        <img src="https://www.freepnglogos.com/uploads/w-letter-logo-png/w-letter-images-about-inspirations-pinterest-1.png"  alt="" /></a> 
+    </div>
+    <div class="text-center mt-4 name">
+        Add Notes
+    </div>
+    <form method="post" class="p-3 mt-3" novalidate>
+        {% csrf_token %}
+
+       
+         <div class="form-field d-flex align-items-center">
+            {% for fm in form %}
+            {{ fm }} <p class="text-center mt-8 error" >{{ fm.errors|striptags }} <br> <br>
+           {% endfor %}
+
+           {% if form.non_field_errors %}
+           {% for fm in form.non_field_errors %}
+            <p>{{ fm.errors }}</p>
+           {% endfor %}
+           {% endif %}
+
+        </div> 
+       
+
+        <button type="submit" class="btn mt-3">Add</button>
+    </form>
+    <div class="text-center fs-6">
+        <p>View Your Notes</p> <a href="{% url 'yourNotes' %}">Your Notes</a>
+        <hr>
+        
+        <p></p> <a href="{% url 'dashboard' %}">Dashboard</a>
+    </div>
+</div> 
+
+{% endblock content %}

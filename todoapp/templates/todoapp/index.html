@@ -1,0 +1,26 @@
+{% extends 'todoapp/base.html' %}
+{% load static %}
+{% block content %}
+      <ul>
+        <li><a href="{% url 'index' %}">Home</a></li>
+        <li><a href="{% url 'about' %}">About</a></li>
+        <li><a href="{% url 'login' %}">Login in</a></li>
+        <li><a href="{% url 'signup' %}">Create Account</a></li>
+        <li><a href="{% url 'contactUs' %}">Contact</a></li>
+      </ul>
+      
+    </div>
+  </nav>
+  <div class="img"></div>
+  <div class="center">
+    <div class="title">Create Amazing Notes on WeeNotes</div>
+    <div class="sub_title">Sign in to create notes</div>
+    <div class="btns">
+      <form action="{% url 'home' %}" method="post">
+        {% csrf_token %}
+      <button type="submit">Create Notes</button>
+    </form>
+    </div>
+  </div>
+</body>
+{% endblock content %}

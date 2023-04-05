@@ -1,0 +1,22 @@
+{% load static %}
+
+</html>
+<title> WeeNotes</title>
+    <link rel="stylesheet" href="{% static 'todoapp/css/landing.css' %}">
+	<link href="{% static 'todoapp/img/img3.jpg' %}">
+    <script src="https://kit.fontawesome.com/a076d05399.js"></script>
+   </head>
+<body>
+   
+  <nav>
+    <div class="menu">
+      <div class="logo">
+        <a href="">WeeNotes</a>
+      </div>
+      {% block content %}
+
+      
+      </nav>
+      {% endblock content %}
+</body>
+</html>
